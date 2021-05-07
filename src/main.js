@@ -1,5 +1,6 @@
 let html = document.querySelector("#demo");
-let style = document.querySelector("#style");
+let style = document.createElement("style");
+document.body.appendChild(style);
 
 let string = `
 /* 你好，我是高璐
@@ -64,8 +65,8 @@ let step = () => {
     }
     html.innerHTML = string2;
     style.innerHTML = string.substring(0, n);
-    window.scrollTo(0,99999);
-    html.scrollTo(0,99999);
+    window.scrollTo(0, 99999);
+    html.scrollTo(0, 99999);
     if (n < string.length - 1) {
       //N不是最后一个
       n += 1;
